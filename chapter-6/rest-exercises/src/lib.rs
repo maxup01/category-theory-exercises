@@ -33,3 +33,17 @@ impl Shape for Rectangle {
         (self.height + self.width) * 2.0
     }
 }
+
+pub struct Square {
+    pub side: f64,
+}
+
+impl Shape for Square {
+    fn field(&self) -> f64 {
+        self.side * self.side
+    }
+
+    fn circumference(&self) -> f64 {
+        self.side * 4.0
+    }
+}
